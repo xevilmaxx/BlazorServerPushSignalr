@@ -1,0 +1,18 @@
+﻿@page "/"
+@inherits Controllers.IndexController
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<br />
+<button @onclick="TrigSignalR">Trigger SignalR</button>
+<br />
+<button @onclick="TrigSignalRServer">Trigger SignalR Server Side</button>
+
+<br/>
+
+@foreach(var msg in _receivedMessages)
+{
+    <p>@msg</p>
+}
